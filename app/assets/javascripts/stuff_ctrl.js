@@ -23,9 +23,11 @@
       }
     ];
 
-    $scope.addReview = function(reviewText) {
+    $scope.addReview = function(text, rating, reviewer) {
       var newReview = {
-        text: reviewText
+        text: text,
+        rating: parseInt(rating),
+        reviewer: reviewer
       }
 
       $scope.reviews.push(newReview);

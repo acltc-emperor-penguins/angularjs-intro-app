@@ -10,13 +10,15 @@
       <h2>AngularJS Reviews</h2>
       <ul>
         <li ng-repeat="review in reviews" ng-if="isPositive(review.text)">
-          {{ review.text }}
+          Rating: {{ review.rating }} : Reviewer: {{ review.reviewer }} : {{ review.text }}
           <input ng-model="review.text">
         </li>
       </ul>
       <h3>Leave your own review of AngularJS</h3>
-      <input ng-model="newReview">
-      <button ng-click="addReview(newReview)">Add Review</button>
+      Text: <input ng-model="newReviewText">
+      Rating: <input ng-model="newReviewRating">
+      Reviewer: <input ng-model="newReviewReviewer">
+      <button ng-click="addReview(newReviewText, newReviewRating, newReviewReviewer)">Add Review</button>
     </div>
   </div>
 </div>
