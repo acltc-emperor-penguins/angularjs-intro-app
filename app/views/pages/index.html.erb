@@ -9,9 +9,9 @@
     <div id="reviews">
       <h2>AngularJS Reviews</h2>
       <ul>
-        <li ng-repeat="review in reviews" ng-if="isPositive(review)">
-          {{ review }}
-          <input ng-model="review">
+        <li ng-repeat="review in reviews" ng-if="isPositive(review.text)">
+          {{ review.text }}
+          <input ng-model="review.text">
         </li>
       </ul>
       <h3>Leave your own review of AngularJS</h3>
